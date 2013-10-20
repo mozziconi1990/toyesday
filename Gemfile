@@ -46,3 +46,22 @@ end
 
 # For Heroku
 gem 'rails_12factor', group: :production
+
+# Use Rspec and Cucumber
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', require: false
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'factory_girl'
+  gem 'guard'
+  gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'guard-livereload'
+  gem 'pickle'
+end
+
+ruby '2.0.0'
+
